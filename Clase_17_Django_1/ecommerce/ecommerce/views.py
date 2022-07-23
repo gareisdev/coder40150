@@ -29,7 +29,7 @@ def index(request, name):
     plantilla = Template(contenido_html)
 
     # Paso 3: Crear contexto
-    contexto = Context({"nombre": name})
+    contexto = Context()
 
     # Paso 4: Preparar documento para renderizar 
     documento_a_renderizar = plantilla.render(contexto)
