@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ecommerce.views import say_hello, say_hello_with_name, print_add, index
+from ecommerce.views import say_hello, say_hello_with_name, print_add, index, notas, alumnos
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', say_hello),
     path('hello/<name>/', say_hello_with_name),
     path('suma/<int:num1>/<int:num2>/', print_add),
-    path('<name>/', index) # 127.0.0.1:8000/
+    path('notas/', notas),
+    path('alumnos/', alumnos),
+    path('<str:nombre>/', index)
 ]
